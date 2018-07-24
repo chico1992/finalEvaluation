@@ -56,6 +56,20 @@ class Cat {
      */
     private $race;
 
+
+    /**
+     * Allways place the constructor before the other methods.
+     *
+     * Initializes an object with the given input
+     */ 
+    public function __construct(string $firstname , int $age , string $color , string $sex , string $race)
+    {
+        $this->setFirstName($firstname)
+            ->setAge($age)
+            ->setColor($color)
+            ->setSex($sex)
+            ->setRace($race);
+    }
     
 
     /**
@@ -182,18 +196,6 @@ class Cat {
         $this->race = $race;
 
         return $this;
-    }
-
-    /**
-     * Initializes an object with the given input
-     */ 
-    public function __construct(string $firstname , int $age , string $color , string $sex , string $race)
-    {
-        $this->setFirstName($firstname)
-            ->setAge($age)
-            ->setColor($color)
-            ->setSex($sex)
-            ->setRace($race);
     }
 
     /**
